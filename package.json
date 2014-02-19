@@ -1,0 +1,28 @@
+{
+  "name": "outflow",
+  "version": "0.0.0",
+  "description": "Logic workflows with validations",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/luiscvega/outflow.git"
+  },
+  "keywords": [
+    "logic",
+    "workflow",
+    "validation",
+    "flow"
+  ],
+  "author": "Luis Vega <luiscvega@gmail.com> (http://luisvega.me/)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/luiscvega/outflow/issues"
+  },
+  "homepage": "https://github.com/luiscvega/outflow"
+}
