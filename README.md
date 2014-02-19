@@ -1,10 +1,11 @@
 # Outflow
-## Logic workflow with validations
+Logic workflow with validations
 
+## Description
 Outflow is heavily inspired from @soveran's Scrivener. Outflow takes Scrivener's front end validation and takes it a step further with a simple callback where you can create your logic.
 
-Example:
-```
+## Usage
+```javascript
 var outflow = require("outflow");
 
 var createPerson = outflow({
