@@ -1,6 +1,6 @@
 {
   "name": "outflow",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Logic workflows with validations",
   "main": "index.js",
   "directories": {
