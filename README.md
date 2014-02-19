@@ -35,8 +35,8 @@ createPerson({
 // Fail
 createPerson({
   first_name: "",
-  last_name: ""
+  last_name: "Doe"
 }, function (err, result) {
-  console.log(err); // { "first name": ["not present"], "last name": ["not present"] }
+  console.log(err); // { "first name": ["not present"] }
 });
 ```
