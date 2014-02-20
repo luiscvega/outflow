@@ -1,4 +1,4 @@
-var logick = require("../lib/outflow");
+var outflow = require("../lib/outflow");
 var assert = require("assert");
 
 var createPerson = outflow({
@@ -19,7 +19,7 @@ it("should run", function () {
     first_name: "John",
     last_name: "Doe"
   }, function (err, result) {
-    assert(Object.keys(err).length === 0);
+    assert.equal(err, undefined);
     assert.deepEqual(result, { first_name: "John", last_name: "Doe" });
   });
 });
