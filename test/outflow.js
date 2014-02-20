@@ -9,8 +9,8 @@ var createPerson = outflow({
     assert(attributes.last_name.length > 0, ["last name", "not present"]);
   },
 
-  success: function (attributes) {
-    return attributes;
+  success: function (attributes, callback) {
+    callback(null, attributes);
   }
 });
 
@@ -19,7 +19,7 @@ it("should run", function () {
     first_name: "John",
     last_name: "Doe"
   }, function (err, result) {
-    assert.equal(err, undefined);
+    assert(err === null);
     assert.deepEqual(result, { first_name: "John", last_name: "Doe" });
   });
 });
