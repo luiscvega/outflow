@@ -27,6 +27,8 @@ it("should validate", function () {
     first_name: "",
     last_name: ""
   }, function (err, result) {
-    assert.deepEqual(err, ["First name cannot be blank", "Last name cannot be blank"]);
+    assert.deepEqual(
+      err.sort(),
+      ["First name cannot be blank", "Last name cannot be blank"]);
   });
 });
