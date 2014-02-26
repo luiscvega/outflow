@@ -2,11 +2,9 @@ var outflow = require("../lib/outflow");
 var assert = require("assert");
 
 var createPerson = outflow({
-  attributes: ["first_name", "last_name"],
-
   validations: function (assert, attributes) {
-    assert(attributes.first_name.length > 0, ["first name", "not present"]);
-    assert(attributes.last_name.length > 0, ["last name", "not present"]);
+    assert(attributes.first_name.length > 0, "First name cannot be blank");
+    assert(attributes.last_name.length > 0, "Last name cannot be blank");
   },
 
   success: function (attributes, callback) {
@@ -29,6 +27,6 @@ it("should validate", function () {
     first_name: "",
     last_name: ""
   }, function (err, result) {
-    assert.deepEqual(err, { "first name": ["not present"], "last name": ["not present"] });
+    assert.deepEqual(err, ["First name cannot be blank", "Last name cannot be blank"]);
   });
 });
